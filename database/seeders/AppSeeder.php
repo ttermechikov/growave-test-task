@@ -15,7 +15,7 @@ class AppSeeder extends Seeder
     public function run()
     {
         ini_set("memory_limit", "-1");
-        $sql_dump = storage_path("dump.sql");
+        $sql_dump = storage_path("dumps/app-dump.sql");
         DB::unprepared(file_get_contents($sql_dump));
     }
 }
