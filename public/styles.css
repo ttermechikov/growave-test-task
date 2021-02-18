@@ -1,0 +1,64 @@
+body {
+    background-color: #fbfbfd;
+}
+
+.main {
+    padding-top: 2rem;
+}
+
+.article {
+    padding-bottom: 1rem;
+}
+
+.article__btn {
+    text-align: right;
+}
+
+.article:not(:last-child) {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+
+.article__text {
+    margin: 1.5em auto;
+    white-space: pre-wrap;
+}
+
+.btn-add-article {
+    margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    .btn-add-article {
+        width: 100%;
+    }
+}
+
+.tag {
+    text-transform: lowercase;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+.tag:hover {
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .aside {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .tags {
+        display: none;
+    }
+}
