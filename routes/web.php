@@ -14,6 +14,6 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::redirect("/", "/articles");
+Route::redirect("/", "articles");
 
 Route::resource("articles", ArticleController::class);

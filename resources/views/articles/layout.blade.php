@@ -6,14 +6,14 @@
     <title>@yield('title')</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
 </head>
 <body>
     <header class="navbar navbar-dark bg-dark box-shadow">
         <div class="container">
             <div class="row">
                 <h1>
-                    <a href="/articles" class="navbar-brand">Блог</a>
+                    <a href="{{ URL::to('/') }}" class="navbar-brand">Блог</a>
                 </h1>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     <h3 class="heading">Тэги</h3>
                     <p>
                         @foreach ($tags as $tag)
-                            <a href="/articles?tag={{ $tag }}" class="tag">
+                            <a href="{{ url('/articles') }}?tag={{ $tag }}" class="tag">
                                 {{ $tag }}
                             </a>
                         @endforeach

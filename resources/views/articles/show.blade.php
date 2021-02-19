@@ -13,7 +13,7 @@
             </date>
                 <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
             @foreach ($article->tags as $tag)
-                <a href="/articles?tag={{ $tag->name }}">
+                <a href="{{ url('/articles') }}?tag={{ $tag->name }}">
                     <i>#{{ $tag->name }}</i>
                 </a>
                 &nbsp;
